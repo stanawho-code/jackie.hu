@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="Jackie Hu (胡佳琪) — Digital Solutions Consultant specialising in AR/AI strategy for luxury and Fortune 500 brands. Portfolio and CV.">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Jackie Hu · Digital Solutions Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -424,6 +425,46 @@ footer{
   .hero-pills{gap:6px}
   .hpill{padding:11px 14px}
 }
+
+
+
+/* ── CV DOWNLOAD BUTTONS ── */
+.cv-dl-wrap {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;
+}
+.cv-btn-en, .cv-btn-cn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 22px; border-radius: 7px;
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+  letter-spacing: 0.02em; cursor: pointer; transition: all .2s;
+  text-decoration: none;
+}
+.cv-btn-en {
+  background: var(--blue); color: #fff; border: none;
+}
+.cv-btn-en:hover { background: #1C6AEE; transform: translateY(-2px); box-shadow: 0 6px 20px var(--blue-glow); }
+.cv-btn-cn {
+  background: transparent; color: var(--text);
+  border: 1px solid var(--border2);
+}
+.cv-btn-cn:hover { border-color: var(--blue2); color: var(--blue2); }
+.cv-btn-en svg, .cv-btn-cn svg { flex-shrink: 0; }
+
+.foot-right { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; }
+.foot-cv { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+@media(max-width:860px) {
+  .foot-right { align-items: flex-start; }
+  .foot-cv { justify-content: flex-start; }
+}
+
+.foot-inline-link {
+  color: var(--sub); text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .18s, border-color .18s;
+}
+.foot-inline-link:hover {
+  color: var(--blue2); border-bottom-color: var(--blue2);
+}
 </style>
 </head>
 <body>
@@ -500,6 +541,7 @@ footer{
         <div class="hpill-label zh">掌握语言</div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -945,13 +987,33 @@ footer{
   <div class="foot-wrap">
     <div>
       <div class="foot-name">Jackie Hu · <span>胡佳琪</span></div>
-      <div class="foot-sub">Shanghai · jackie.huw@gmail.com · +86 175 1162 8969</div>
+      <div class="foot-sub">
+        Shanghai &nbsp;·&nbsp;
+        <a href="mailto:jackie.huw@gmail.com" class="foot-inline-link">jackie.huw@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="tel:+8617511628969" class="foot-inline-link">+86 175 1162 8969</a>
+      </div>
     </div>
-    <div class="foot-links">
-      <a href="https://www.linkedin.com/in/jiaqi-hu-9a2883249/" target="_blank" class="fl blue">LinkedIn</a>
-      <a href="mailto:jackie.huw@gmail.com" class="fl ghost">
-        <span class="en">Email</span><span class="zh">发邮件</span>
-      </a>
+    <div class="foot-right">
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/in/jiaqi-hu-9a2883249/" target="_blank" class="fl blue">LinkedIn</a>
+        <a href="mailto:jackie.huw@gmail.com" class="fl ghost">
+          <span class="en">Email</span><span class="zh">发邮件</span>
+        </a>
+        <a href="tel:+8617511628969" class="fl ghost">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.06 1.22 2 2 0 012 .06h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>+86 175 1162 8969
+        </a>
+      </div>
+      <div class="foot-cv">
+        <a href="cv-en.pdf" download="JackieHu_CV_EN.pdf" class="cv-btn-en">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span class="en">Download CV (EN)</span><span class="zh">下载简历（英文）</span>
+        </a>
+        <a href="cv-cn.pdf" download="JackieHu_CV_CN.pdf" class="cv-btn-cn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span class="en">Download CV (中文)</span><span class="zh">下载简历（中文）</span>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
